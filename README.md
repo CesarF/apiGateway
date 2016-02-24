@@ -20,7 +20,7 @@ The next table show all the service definitions:
 | /apps | GET  | Show all registered microservices |
 | /apps | POST | Register a microservice. It needs to post a json object according below specification |
 | /apps/**serviceName**  | DELETE | Deletes the micro service with **appName** |
-| /service/**serviceName**\[/**optionalPath**\] | Request the microservice. **optionalPath** is the optional url params for the service |
+| /service/**serviceName**\[/**optionalPath**\] | Any Method | Request the microservice. **optionalPath** is the optional url params for the service |
 
 ### POST Specification
 

@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(allowCrossDomain);
 
-// get a service without get paramas
 app.all("/service/:serviceName*", function (req, res) {
     db.find({"appName": req.params.serviceName}, function (err, doc) {
         if (doc.length == 0) {
@@ -50,7 +49,7 @@ app.all("/service/:serviceName*", function (req, res) {
 // Register a service
 app.post('/apps', function (req, res) {
     var body = req.body;
-    if (!body.appName || !body.hostName || !body.port || !body.service || !body.method) {
+    if (!body.appName || !body.hostName || !body.service || !body.method) {
         res.status(400).send({
             status: 400,
             message: "Bad Request"

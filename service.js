@@ -62,6 +62,7 @@ app.post('/apps', function (req, res) {
             "service": body.service,
             "method": body.method
         });
+        console.log("Service "+body.appName+" Registered at: http://"+body.hostName+":"+body.port+body.service+" with "+body.method+" method");
         res.status(200).send({
             status: 200,
             message: "App Registered Successfully"
